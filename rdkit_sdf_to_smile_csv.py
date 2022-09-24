@@ -6,9 +6,9 @@ import os
 import pandas as pd 
 names=[]
 smile_format=[]
-file_names=os.listdir("sdf_dir")
+file_names=os.listdir("directory_name")
 for file_name in file_names:
-    sdf = Chem.SDMolSupplier( 'sdf_dir/%s'%file_name )
+    sdf = Chem.SDMolSupplier('directory_name/%s'%file_name)
     for mol in sdf:
         smi = Chem.MolToSmiles(mol)
         print(file_name, smi)
